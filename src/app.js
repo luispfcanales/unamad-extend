@@ -1,4 +1,5 @@
 import viewHome from './views/home/home.js'
+import viewProfile from './views/perfil/perfil.js'
 import pageNotFound from './views/error404/error404.js'
 import router from './router/router.js'
 
@@ -16,6 +17,9 @@ export default function(){
     case "#/inicio":
       element.innerHTML = null;
       element.appendChild(viewHome());break;
+     case "#/editar-perfil":
+      element.innerHTML = null;
+      element.appendChild(viewProfile());break;
     default:
       element.innerHTML = null;
       element.appendChild(pageNotFound());break;
