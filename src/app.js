@@ -4,18 +4,22 @@ import router from './router/router.js'
 
 //element is root container to app
 const element = document.createElement("div");
+const root = document.getElementById("root-content")
 
 export default function(){
 
   switch(router()){
     case "":
-      window.location = "#/";break;
+      window.location = "#/inicio";break;
     case "#/":
+      window.location = "#/inicio";break;
+    case "#/inicio":
+      element.innerHTML = null;
       element.appendChild(viewHome());break;
     default:
       element.innerHTML = null;
       element.appendChild(pageNotFound());break;
   }
 
-  document.body.appendChild(element)
+  root.appendChild(element)
 }
