@@ -1,4 +1,3 @@
-import './card-profile.css'
 const card = `
 <div class="card-container-profile">
   <p><img src="./assets/images/faces/face1.jpg"></p>
